@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BingSecretChat 管理后台 - Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            max-width: 500px;
+            width: 90%;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        .icon {
+            font-size: 64px;
+            margin-bottom: 16px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 8px;
+        }
+        .subtitle {
+            color: #999;
+            font-size: 14px;
+        }
+        .status {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 24px;
+        }
+        .status-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+        }
+        .status-item:last-child {
+            margin-bottom: 0;
+        }
+        .label {
+            color: #666;
+        }
+        .value {
+            font-weight: 600;
+            color: #333;
+        }
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        .badge-success {
+            background: #52c41a;
+            color: white;
+        }
+        .badge-warning {
+            background: #faad14;
+            color: white;
+        }
+        .badge-info {
+            background: #1890ff;
+            color: white;
+        }
+        .info-box {
+            background: #e6f7ff;
+            border: 1px solid #91d5ff;
+            padding: 16px;
+            border-radius: 8px;
+            margin-bottom: 24px;
+        }
+        .info-box h3 {
+            color: #1890ff;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+        .info-box p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+        .features {
+            margin-bottom: 24px;
+        }
+        .features h3 {
+            color: #333;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+        .feature-list {
+            list-style: none;
+        }
+        .feature-list li {
+            padding: 8px 0;
+            color: #666;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+        .feature-list li::before {
+            content: '✅ ';
+            margin-right: 8px;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            margin-bottom: 12px;
+            transition: transform 0.2s;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+        .btn-secondary {
+            background: #f0f0f0;
+            color: #333;
+        }
+        .footer {
+            text-align: center;
+            color: #999;
+            font-size: 12px;
+            margin-top: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="icon">🔐</div>
+            <h1>BingSecretChat</h1>
+            <p class="subtitle">管理后台 Demo</p>
+        </div>
+
+        <div class="status">
+            <div class="status-item">
+                <span class="label">项目状态</span>
+                <span class="badge badge-success">✅ 已完成</span>
+            </div>
+            <div class="status-item">
+                <span class="label">后端 API</span>
+                <span class="badge badge-warning">🚧 待实现</span>
+            </div>
+            <div class="status-item">
+                <span class="label">Vercel 部署</span>
+                <span class="badge badge-info">⏳ 准备中</span>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <h3>📋 项目信息</h3>
+            <p><strong>版本:</strong> v1.0.0</p>
+            <p><strong>技术栈:</strong> React 19 + TypeScript + Ant Design 6</p>
+            <p><strong>部署平台:</strong> Vercel</p>
+            <p><strong>代码位置:</strong> /home/user/webapp-admin</p>
+        </div>
+
+        <div class="features">
+            <h3>✨ 已完成功能</h3>
+            <ul class="feature-list">
+                <li>登录页面 UI</li>
+                <li>主布局和导航</li>
+                <li>控制台数据展示</li>
+                <li>用户管理页面</li>
+                <li>API 服务封装</li>
+                <li>权限系统设计</li>
+            </ul>
+        </div>
+
+        <div class="features">
+            <h3>🚧 待实现功能</h3>
+            <ul class="feature-list">
+                <li>后端管理 API</li>
+                <li>其他管理页面</li>
+                <li>数据分析图表</li>
+            </ul>
+        </div>
+
+        <a href="../DEPLOYMENT_GUIDE.md" class="btn" download>
+            📥 下载部署指南
+        </a>
+        <a href="../VERCEL_DEPLOYMENT.md" class="btn btn-secondary" download>
+            📥 下载 Vercel 部署指南
+        </a>
+
+        <div class="footer">
+            © 2024 BingSecretChat. All rights reserved.
+        </div>
+    </div>
+</body>
+</html>
